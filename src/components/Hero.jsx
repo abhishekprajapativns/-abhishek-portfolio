@@ -18,7 +18,7 @@ export default function Hero() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Full Stack Developer
+          MERN Stack Developer
         </h2>
 
         <p className="text-[#a89bc2] text-base max-w-md mb-8 leading-relaxed">
