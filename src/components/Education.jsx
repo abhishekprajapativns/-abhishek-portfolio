@@ -25,8 +25,11 @@ function Education() {
         <div className="relative">
           {/* Dot */}
           <div
-            className="absolute -left-[41px] top-1 w-4 h-4 rounded-full border-2 border-[#667eea]"
-            style={{ background: "linear-gradient(135deg, #667eea, #764ba2)" }}
+            className="absolute top-1 w-4 h-4 rounded-full border-2 border-[#667eea]"
+            style={{
+              left: "-41px",
+              background: "linear-gradient(135deg, #667eea, #764ba2)",
+            }}
           />
 
           {/* Year */}
