@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Navbar() {
+function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -8,42 +8,50 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-[6%] h-16">
         {/* Logo */}
         <div
-          className="font-mono text-xl font-bold text-transparent bg-clip-text"
+          className="font-mono text-2xl font-black text-transparent"
           style={{
             background: "linear-gradient(135deg, #667eea, #764ba2)",
             WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
           }}
         >
           AP.
         </div>
 
         {/* Nav Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {["Home", "About", "Projects", "Skills", "Education", "Contact"].map(
             (link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-sm text-[#a89bc2] hover:text-[#667eea] transition-colors"
+                className="text-sm text-[#a89bc2] hover:text-[#667eea] transition-colors relative group"
               >
                 {link}
+                <span
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                  style={{
+                    background: "linear-gradient(90deg, #667eea, #764ba2)",
+                  }}
+                />
               </a>
             ),
           )}
         </div>
 
+        {/* Resume Button */}
+
         <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block px-4 py-2 text-sm font-medium border border-[#667eea] text-[#667eea] rounded-full hover:bg-[#667eea] hover:text-white transition-all"
+          href="#"
+          className="hidden md:block px-6 py-2 text-sm text-white rounded-full transition-all hover:opacity-90"
+          style={{ background: "linear-gradient(135deg, #667eea, #764ba2)" }}
         >
-          Resume
+          Download Resume ↓
         </a>
 
-        {/* Hamburger - mobile only */}
+        {/* Hamburger - mobile */}
         <button
-          className="md:hidden text-[#a89bc2]"
+          className="md:hidden text-white text-xl"
           onClick={() => setOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
@@ -58,7 +66,7 @@ export default function Navbar() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-sm text-[#a89bc2] hover:text-[#667eea]"
+                className="text-sm font-semibold text-white hover:text-[#667eea]"
                 onClick={() => setOpen(false)}
               >
                 {link}
@@ -70,3 +78,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
