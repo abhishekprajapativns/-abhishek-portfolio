@@ -1,65 +1,158 @@
 function About() {
   return (
-    <section id="about" className="py-20 px-[6%]">
+    <section
+      id="about"
+      style={{
+        padding: "80px 6%",
+        background: "rgba(102,126,234,0.02)",
+        borderTop: "1px solid #2a2450",
+        borderBottom: "1px solid #2a2450",
+      }}
+    >
       {/* Section Label */}
-
-      <p className="text-xs font-mono text-[#667eea] tracking-widest uppercase mb-2">
+      <div
+        style={{
+          fontSize: "0.7rem",
+          fontFamily: "'Fira Code', monospace",
+          color: "#667eea",
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          marginBottom: "0.5rem",
+        }}
+      >
         About Me
-      </p>
+      </div>
 
       {/* Section Title */}
-
-      <h2 className="text-3xl font-bold text-white mb-10">Get to know me</h2>
+      <div
+        style={{
+          fontSize: "2rem",
+          fontWeight: "700",
+          color: "#e2d9f3",
+          marginBottom: "2.5rem",
+        }}
+      >
+        Get to know me
+      </div>
 
       {/* Grid */}
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1.2fr 1fr",
+          gap: "3rem",
+          alignItems: "start",
+        }}
+      >
         {/* Left Side */}
-
         <div>
-          {/* Description */}
-
-          <p className="text-[#a89bc2] leading-relaxed mb-4">
+          <p
+            style={{
+              fontSize: "0.9rem",
+              color: "#a89bc2",
+              lineHeight: "1.9",
+              marginBottom: "0.75rem",
+            }}
+          >
             I'm a passionate{" "}
-            <span className="text-[#667eea]">MERN Stack Developer</span> who
-            loves building modern, scalable and efficient web applications.
+            <span style={{ color: "#667eea" }}>MERN Stack Developer</span> who
+            loves building modern, scalable and efficient web applications. I
+            enjoy solving real-world problems and turning ideas into reality
+            with clean code and great user experiences.
           </p>
-
-          <p className="text-[#a89bc2] leading-relaxed mb-8">
+          <p
+            style={{
+              fontSize: "0.9rem",
+              color: "#a89bc2",
+              lineHeight: "1.9",
+              marginBottom: "0.75rem",
+            }}
+          >
             I mainly work with{" "}
-            <span className="text-[#667eea]">
+            <span style={{ color: "#667eea" }}>
               MongoDB, Express.js, React.js and Node.js
             </span>{" "}
             to develop full-stack applications.
           </p>
 
-          {/* Info Boxes */}
-
-          <div className="grid grid-cols-2 gap-3">
+          {/* Meta Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "0.75rem",
+              marginTop: "1.5rem",
+            }}
+          >
             {[
               { icon: "⚡", label: "Experience", value: "Fresher" },
               { icon: "📍", label: "Location", value: "India" },
               { icon: "✅", label: "Availability", value: "Open to Work" },
-              { icon: "📧", label: "Email", value: "abhishek@example.com" },
+              {
+                icon: "📧",
+                label: "Email",
+                value: "abhishek.prajapati.it@gmail.com",
+                small: true,
+              },
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-[#13102e] border border-[#2a2450] rounded-xl p-3 flex items-center gap-3"
+                style={{
+                  background: "#13102e",
+                  border: "1px solid #2a2450",
+                  borderRadius: "10px",
+                  padding: "10px 14px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  fontSize: "0.78rem",
+                }}
               >
-                <span>{item.icon}</span>
+                <span style={{ color: "#667eea" }}>{item.icon}</span>
                 <div>
-                  <p className="text-[#a89bc2] text-xs">{item.label}</p>
-                  <p className="text-white text-sm font-medium">{item.value}</p>
+                  <span
+                    style={{
+                      color: "#a89bc2",
+                      fontSize: "0.7rem",
+                      display: "block",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                  <span
+                    style={{
+                      color: "#e2d9f3",
+                      fontWeight: "500",
+                      fontSize: item.small ? "0.72rem" : "inherit",
+                    }}
+                  >
+                    {item.value}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right Side */}
-
-        <div className="bg-[#13102e] border border-[#2a2450] rounded-2xl p-6">
-          <h3 className="text-white font-semibold text-lg mb-5">What I Do</h3>
+        {/* Right Side - What I Do */}
+        <div
+          style={{
+            background: "#13102e",
+            border: "1px solid #2a2450",
+            borderRadius: "14px",
+            padding: "1.5rem",
+          }}
+        >
+          <h4
+            style={{
+              fontSize: "1rem",
+              fontWeight: "600",
+              marginBottom: "1.2rem",
+              color: "#e2d9f3",
+            }}
+          >
+            What I Do
+          </h4>
 
           {[
             "Build responsive and interactive front-end using React.js",
@@ -68,16 +161,38 @@ function About() {
             "Implement authentication & authorization (JWT)",
             "Deploy full-stack applications",
           ].map((item) => (
-            <div key={item} className="flex items-start gap-3 mb-4">
+            <div
+              key={item}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "10px",
+                marginBottom: "0.9rem",
+                fontSize: "0.85rem",
+                color: "#a89bc2",
+                lineHeight: "1.5",
+              }}
+            >
+              {/* Check */}
               <div
-                className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5"
                 style={{
+                  width: "18px",
+                  height: "18px",
+                  borderRadius: "50%",
                   background: "linear-gradient(135deg, #667eea, #764ba2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: "0",
+                  marginTop: "1px",
+                  fontSize: "0.6rem",
+                  color: "#fff",
+                  fontWeight: "700",
                 }}
               >
-                <span className="text-white text-xs">✓</span>
+                ✓
               </div>
-              <p className="text-[#a89bc2] text-sm leading-relaxed">{item}</p>
+              {item}
             </div>
           ))}
         </div>
@@ -85,4 +200,5 @@ function About() {
     </section>
   );
 }
+
 export default About;
