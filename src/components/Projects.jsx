@@ -1,86 +1,204 @@
 const projects = [
   {
-    title: "CargoBid",
-    description:
-      "A full-stack cargo bidding platform where shippers post cargo and transports place competitive quotes. Features JWT authentication with dual roles.",
-    techs: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+    emoji: "🚚",
+    name: "CargoBid",
+    desc: "A full-stack cargo bidding platform where shippers post cargo and transporters place competitive quotes. Features JWT authentication with dual roles.",
+    chips: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
     live: "https://cargo-bid.vercel.app",
     github: "https://github.com/abhishekprajapativns/CargoBid",
-    emoji: "🚚",
   },
-
   {
-    title: "Myntra Clone",
-    description:
-      "A full-stack Myntra e-commerce clone with JWT authentication, product listing from MongoDB, wishlist, cart, and multi-step checkout.",
-    techs: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+    emoji: "🛍️",
+    name: "Myntra Clone",
+    desc: "A full-stack Myntra e-commerce clone with JWT authentication, product listing from MongoDB, wishlist, cart, and multi-step checkout.",
+    chips: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
     live: "https://myntra-clone-bay-three.vercel.app",
     github: "https://github.com/abhishekprajapativns/myntra-clone",
-    emoji: "🛍️",
   },
 ];
 
 function Projects() {
   return (
-    <section id="projects" className="py-20 px-[6%]">
-      {/* Section Label */}
-      <p className="text-xs font-mono text-[#667eea] tracking-widest uppercase mb-2">
-        My Projects
-      </p>
+    <section
+      id="projects"
+      style={{
+        padding: "80px 6%",
+        background: "rgba(102,126,234,0.02)",
+        borderTop: "1px solid #2a2450",
+        borderBottom: "1px solid #2a2450",
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: "2rem",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              fontSize: "0.7rem",
+              fontFamily: "'Fira Code', monospace",
+              color: "#667eea",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              marginBottom: "0.5rem",
+            }}
+          >
+            My Projects
+          </div>
+          <div
+            style={{
+              fontSize: "2rem",
+              fontWeight: "700",
+              color: "#e2d9f3",
+            }}
+          >
+            Some Things I've Built
+          </div>
+        </div>
 
-      {/* Section Title */}
-      <h2 className="text-3xl font-bold text-white mb-10">
-        Some Things I've Built
-      </h2>
+        <a
+          href="#"
+          style={{
+            fontSize: "0.82rem",
+            color: "#667eea",
+            border: "1px solid rgba(102,126,234,0.3)",
+            padding: "6px 14px",
+            borderRadius: "20px",
+            transition: "all 0.2s",
+          }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.background = "rgba(102,126,234,0.1)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.background = "transparent")
+          }
+        >
+          View All Projects →
+        </a>
+      </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "1.25rem",
+        }}
+      >
         {projects.map((project) => (
           <div
-            key={project.title}
-            className="bg-[#13102e] border border-[#2a2450] rounded-2xl overflow-hidden hover:border-[#667eea] transition-colors group"
+            key={project.name}
+            style={{
+              background: "#13102e",
+              border: "1px solid #2a2450",
+              borderRadius: "14px",
+              overflow: "hidden",
+              transition: "transform 0.2s, border-color 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-6px)";
+              e.currentTarget.style.borderColor = "#667eea";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.borderColor = "#2a2450";
+            }}
           >
-            {/* Top gradient line */}
+            {/* Emoji */}
             <div
-              className="h-1"
               style={{
-                background: "linear-gradient(90deg, #667eea, #764ba2)",
+                height: "150px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "2.5rem",
+                borderBottom: "1px solid #2a2450",
+                background: "#1a1640",
               }}
-            />
-
-            {/* Emoji placeholder */}
-            <div className="h-40 flex items-center justify-center text-6xl bg-[#1a1640]">
+            >
               {project.emoji}
             </div>
 
-            {/* Content */}
-            <div className="p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">
-                {project.title}
-              </h3>
-              <p className="text-[#a89bc2] text-sm leading-relaxed mb-4">
-                {project.description}
-              </p>
+            {/* Body */}
+            <div style={{ padding: "1.1rem" }}>
+              <div
+                style={{
+                  fontSize: "0.95rem",
+                  fontWeight: "600",
+                  marginBottom: "0.4rem",
+                  color: "#e2d9f3",
+                }}
+              >
+                {project.name}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.78rem",
+                  color: "#a89bc2",
+                  lineHeight: "1.6",
+                  marginBottom: "0.9rem",
+                }}
+              >
+                {project.desc}
+              </div>
 
-              {/* Tech chips */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.techs.map((tech) => (
+              {/* Chips */}
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "5px",
+                  marginBottom: "0.9rem",
+                }}
+              >
+                {project.chips.map((chip) => (
                   <span
-                    key={tech}
-                    className="text-xs font-mono px-3 py-1 rounded-full text-[#667eea] border border-[#667eea]/30 bg-[#667eea]/10"
+                    key={chip}
+                    style={{
+                      fontSize: "0.65rem",
+                      fontFamily: "'Fira Code', monospace",
+                      background: "rgba(102,126,234,0.1)",
+                      border: "1px solid rgba(102,126,234,0.2)",
+                      color: "#667eea",
+                      padding: "3px 9px",
+                      borderRadius: "10px",
+                    }}
                   >
-                    {tech}
+                    {chip}
                   </span>
                 ))}
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-3">
+              <div style={{ display: "flex", gap: "0.6rem" }}>
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm px-4 py-2 rounded-lg border border-[#2a2450] text-[#a89bc2] hover:border-[#667eea] hover:text-[#667eea] transition-all"
+                  style={{
+                    fontSize: "0.75rem",
+                    padding: "5px 13px",
+                    borderRadius: "8px",
+                    border: "1px solid #2a2450",
+                    color: "#a89bc2",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#667eea";
+                    e.currentTarget.style.color = "#667eea";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#2a2450";
+                    e.currentTarget.style.color = "#a89bc2";
+                  }}
                 >
                   ⚡ Live Demo
                 </a>
@@ -89,7 +207,25 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm px-4 py-2 rounded-lg border border-[#2a2450] text-[#a89bc2] hover:border-[#667eea] hover:text-[#667eea] transition-all"
+                  style={{
+                    fontSize: "0.75rem",
+                    padding: "5px 13px",
+                    borderRadius: "8px",
+                    border: "1px solid #2a2450",
+                    color: "#a89bc2",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "#667eea";
+                    e.currentTarget.style.color = "#667eea";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "#2a2450";
+                    e.currentTarget.style.color = "#a89bc2";
+                  }}
                 >
                   ⬡ GitHub
                 </a>
