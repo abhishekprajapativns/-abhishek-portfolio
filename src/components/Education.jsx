@@ -1,53 +1,101 @@
-const education = [
-  {
-    year: "2019 — 2021",
-    degree: "Master of Science in IT (MSc IT)",
-    school: "Hemwati Nandan Bahuguna Garhwal University (HNBGU)",
-    grade: "7.83 CGPA",
-  },
-];
-
 function Education() {
   return (
-    <section id="education" className="py-20 px-[6%]">
+    <section
+      id="education"
+      style={{
+        padding: "60px 6%",
+        background: "rgba(102,126,234,0.02)",
+        borderTop: "1px solid #2a2450",
+        borderBottom: "1px solid #2a2450",
+      }}
+    >
       {/* Section Label */}
-      <p className="text-xs font-mono text-[#667eea] tracking-widest uppercase mb-2">
+      <div
+        style={{
+          fontSize: "0.7rem",
+          fontFamily: "'Fira Code', monospace",
+          color: "#667eea",
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          marginBottom: "0.5rem",
+        }}
+      >
         Education
-      </p>
+      </div>
 
       {/* Section Title */}
-      <h2 className="text-3xl font-bold text-white mb-10">
+      <div
+        style={{
+          fontSize: "2rem",
+          fontWeight: "700",
+          color: "#e2d9f3",
+          marginBottom: "2rem",
+          textAlign: "left",
+        }}
+      >
         My Academic Journey
-      </h2>
+      </div>
 
-      {/* Timeline */}
-      <div className="max-w-2xl border-l-2 border-[#667eea]/30 pl-8">
-        <div className="relative">
-          {/* Dot */}
-          <div
-            className="absolute top-1 w-4 h-4 rounded-full border-2 border-[#667eea]"
-            style={{
-              left: "-41px",
-              background: "linear-gradient(135deg, #667eea, #764ba2)",
-            }}
-          />
+      {/* Single Card — no timeline needed for 1 item */}
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        {/* Year */}
+        <div
+          style={{
+            fontSize: "0.7rem",
+            fontFamily: "'Fira Code', monospace",
+            color: "#667eea",
+            marginBottom: "0.4rem",
+          }}
+        >
+          2019 — 2021
+        </div>
 
-          {/* Year */}
-          <p className="text-xs font-mono text-[#667eea] mb-1">2019 — 2021</p>
-
-          {/* Card */}
-          <div className="bg-[#13102e] border border-[#2a2450] rounded-xl p-4 flex justify-between items-center hover:border-[#667eea] transition-colors">
-            <div>
-              <p className="text-white font-semibold">
-                Master of Science in IT (MSc IT)
-              </p>
-              <p className="text-[#a89bc2] text-sm mt-1">
-                Hemwati Nandan Bahuguna Garhwal University (HNBGU)
-              </p>
+        {/* Card */}
+        <div
+          style={{
+            background: "#13102e",
+            border: "1px solid #2a2450",
+            borderRadius: "12px",
+            padding: "1.2rem 1.5rem",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            transition: "border-color 0.2s, transform 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.borderColor = "#667eea";
+            e.currentTarget.style.transform = "translateX(6px)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.borderColor = "#2a2450";
+            e.currentTarget.style.transform = "translateX(0)";
+          }}
+        >
+          <div>
+            <div
+              style={{
+                fontSize: "1rem",
+                fontWeight: "600",
+                marginBottom: "0.25rem",
+                color: "#e2d9f3",
+              }}
+            >
+              Master of Science in IT (MSc IT)
             </div>
-            <p className="text-green-400 font-bold text-sm whitespace-nowrap ml-4">
-              7.83 CGPA
-            </p>
+            <div style={{ fontSize: "0.82rem", color: "#a89bc2" }}>
+              Hemwati Nandan Bahuguna Garhwal University (HNBGU)
+            </div>
+          </div>
+          <div
+            style={{
+              fontSize: "1rem",
+              fontWeight: "700",
+              color: "#4ade80",
+              whiteSpace: "nowrap",
+              marginLeft: "1.5rem",
+            }}
+          >
+            7.83 CGPA
           </div>
         </div>
       </div>
