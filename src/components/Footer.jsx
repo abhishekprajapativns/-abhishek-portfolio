@@ -15,7 +15,7 @@ function Footer() {
       <span>© 2025 Abhishek Prajapati. All rights reserved.</span>
 
       <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-        Built with ❤️ using{" "}
+        Built with using{" "}
         <span style={{ color: "#667eea" }}>React & Tailwind CSS</span>
         &nbsp;·&nbsp;
         <a href="#home" style={{ color: "#667eea" }}>
