@@ -1,16 +1,55 @@
-# React + Vite
+# Abhishek Prajapati - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built using **React.js**, **Tailwind CSS**, and **Vite**. It showcases my skills, projects, education, and experience as a MERN Stack Developer.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Website:** https://abhishek-portfolio.vercel.app
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Built With
 
-## Expanding the ESLint configuration
+* React.js
+* Tailwind CSS
+* Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* Fully responsive design
+* Modern dark theme with purple gradient
+* Interactive MERN stack orbit animation
+* Smooth scrolling navigation
+* Project showcase with live demo and source code links
+* Clean and user-friendly UI
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Skills.jsx
+│   ├── Projects.jsx
+│   ├── Highlights.jsx
+│   ├── Education.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── App.jsx
+└── index.css
+```
+
+## 🏃 Run Locally
+
+```bash
+git clone https://github.com/abhishekprajapativns/-abhishek-portfolio.git
+cd -abhishek-portfolio
+npm install
+npm run dev
+```
+
+## 👨‍💻 Author
+
+**Abhishek Prajapati**
+MERN Stack Developer
