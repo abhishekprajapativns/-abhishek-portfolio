@@ -2,9 +2,7 @@
 
 A modern and responsive portfolio website built using **React.js**, **Tailwind CSS**, and **Vite**. It showcases my skills, projects, education, and experience as a MERN Stack Developer.
 
-## 🚀 Live Demo
 
-**Website:** https://abhishek-portfolio.vercel.app
 
 
 ## 🛠️ Built With
