@@ -42,8 +42,10 @@ function Navbar() {
         {/* Resume Button */}
 
         <a
-          href="#"
-          className="hidden md:block px-6 py-2 text-sm text-white rounded-full transition-all hover:opacity-90"
+          href="/Resume_PDF.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:block px-5 py-2 text-sm text-white rounded-full transition-all"
           style={{ background: "linear-gradient(135deg, #667eea, #764ba2)" }}
         >
           Download Resume ↓
