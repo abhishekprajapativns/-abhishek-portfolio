@@ -40,7 +40,7 @@ const contacts = [
   {
     label: "Resume",
     sub: "Get my latest resume",
-    link: "#",
+    link: "/Resume_PDF.pdf",
     svg: (
       <svg
         width="22"
