@@ -15,6 +15,15 @@ const projects = [
     live: "https://myntra-clone-bay-three.vercel.app",
     github: "https://github.com/abhishekprajapativns/myntra-clone",
   },
+
+  {
+    emoji: "💼",
+    name: "Job Portal",
+    desc: "A full-stack Job Portal where candidates can search and apply for jobs, while recruiters can post and manage listings with role-based JWT authentication.",
+    chips: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+    live: "https://job-portal-morm.vercel.app",
+    github: "https://github.com/abhishekprajapativns/Job_Portal",
+  },
 ];
 
 function Projects() {
@@ -86,7 +95,7 @@ function Projects() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "1.25rem",
         }}
       >
