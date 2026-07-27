@@ -1,24 +1,29 @@
-# Abhishek Prajapati - Portfolio
+# Abhishek Prajapati — Portfolio
 
-A modern and responsive portfolio website built using **React.js**, **Tailwind CSS**, and **Vite**. It showcases my skills, projects, education, and experience as a MERN Stack Developer.
+A modern, responsive portfolio website built with **React.js**, **Tailwind CSS**, and **Vite**. This portfolio showcases my technical skills, projects, education, and experience as a **MERN Stack Developer**.
 
+## 🌐 Live Demo
 
+🔗 **Portfolio:** https://abhishek-portfolio-six-alpha.vercel.app
 
-
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
 * React.js
 * Tailwind CSS
 * Vite
+* JavaScript
+* HTML5
+* CSS3
 
 ## ✨ Features
 
-* Fully responsive design
-* Modern dark theme with purple gradient
-* Interactive MERN stack orbit animation
+* Fully responsive design for desktop, tablet, and mobile
+* Modern dark-themed UI with purple gradient accents
+* Interactive MERN Stack orbit animation
 * Smooth scrolling navigation
+* Dedicated sections for skills, projects, education, and contact
 * Project showcase with live demo and source code links
-* Clean and user-friendly UI
+* Clean and user-friendly interface
 
 ## 📂 Project Structure
 
@@ -47,12 +52,17 @@ npm install
 npm run dev
 ```
 
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
 ## 👨‍💻 Author
 
 **Abhishek Prajapati**
-MERN Stack Developer
 
+MERN Stack Developer | Full Stack Developer
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/abhishek-prajapati-03036b3b4/)
-[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/abhishekprajapativns)
-[![Email](https://img.shields.io/badge/Email-red?logo=gmail)](mailto:abhishek.prajapati.it@gmail.com)
+* Portfolio: https://abhishek-portfolio-six-alpha.vercel.app
+* GitHub: https://github.com/abhishekprajapativns
