@@ -12,7 +12,7 @@ function Footer() {
         color: "#a89bc2",
       }}
     >
-      <span>© 2025 Abhishek Prajapati. All rights reserved.</span>
+      <span>© 2026 Abhishek Prajapati. All rights reserved.</span>
 
       <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
         Built with using{" "}
